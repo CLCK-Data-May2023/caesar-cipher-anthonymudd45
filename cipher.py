@@ -1,13 +1,20 @@
 # add your code here
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-cypher = "fghijklmnopqrstuvwxyzabcde"
-encryption = {}
-i = 0
-for letter in alphabet:
-    encryption[letter] = cypher[i]
-    i += 1
+alphabet = {
+    'a':'f', 'b':'g', 'c':'h', 'd':'i', 'e':'j', 'f':'k', 'g':'l', 'h':'m', 'i':'n', 'j':'o',
+    'k':'p', 'l':'q', 'm':'r', 'n':'s', 'o':'t', 'p':'u', 'q':'v', 'r':'w', 's':'x', 't':'y',
+    'u':'z', 'v':'a', 'w':'b', 'x':'c', 'y':'d', 'z':'e'
+    } 
+message = input('Please enter a sentence:')
+message = message.lower()
 
-message = str(input("Please enter a message:")).lower()
+cypher = ''
+for letter in message:
 
-output = [encryption.get(letter, letter) for letter in message]
-print("".join(output))
+    if letter in alphabet:
+        cypher += alphabet[letter] 
+    elif letter not in alphabet:
+        cypher += letter
+    else:
+        cypher += ' '
+
+print(cypher)
