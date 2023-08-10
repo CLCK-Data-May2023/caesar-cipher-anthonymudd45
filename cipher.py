@@ -7,7 +7,7 @@ alphabet = {
 message = input('Please enter a sentence:')
 message = message.lower()
 
-cypher = ''
+cypher = 'The encrypted sentence is:'
 for letter in message:
 
     if letter in alphabet:
