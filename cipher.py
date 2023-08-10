@@ -4,10 +4,10 @@ alphabet = {
     'k':'p', 'l':'q', 'm':'r', 'n':'s', 'o':'t', 'p':'u', 'q':'v', 'r':'w', 's':'x', 't':'y',
     'u':'z', 'v':'a', 'w':'b', 'x':'c', 'y':'d', 'z':'e'
     } 
-message = input('Please enter a sentence:')
+message = input('Please enter a sentence: ')
 message = message.lower()
 
-cypher = 'The encrypted sentence is:'
+cypher = 'The encrypted sentence is: '
 for letter in message:
 
     if letter in alphabet:
